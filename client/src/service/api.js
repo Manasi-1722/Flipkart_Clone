@@ -4,7 +4,7 @@ const URL ='';
 
 export const authenticateSignup = async (data) => {
     try {
-        return await axios.post(`${URL}/signup`, data);
+        return await axios.post(`https://flipkart-clone-mky.onrender.com/signup`, data);
 
     }catch (error){
         console.log('Error while calling signup api ', error)
@@ -14,7 +14,7 @@ export const authenticateSignup = async (data) => {
 
 export const authenticateLogin = async (data) => {
     try {
-        return await axios.post(`${URL}/login`, data);
+        return await axios.post(`https://flipkart-clone-mky.onrender.com/login`, data);
 
     }catch (error){
         console.log('Error while calling login api ', error);
@@ -26,7 +26,7 @@ export const authenticateLogin = async (data) => {
 
 export const getProductById = async (id) => {
     try {
-        return await axios.get(`${URL}/product/${id}`);
+        return await axios.get(`https://flipkart-clone-mky.onrender.com/product/${id}`);
     } catch (error) {
         console.log('Error while getting product by id response', error);
     }
@@ -35,7 +35,7 @@ export const getProductById = async (id) => {
 
 export const payUsingPaytm = async (data) => {
     try {
-        let response = await axios.post(`${URL}/payment`, data);
+        let response = await axios.post(https://flipkart-clone-mky.onrender.com/payment`, data);
         return response.data;
     } catch (error) {
         console.log('Error while calling payment API', error);
